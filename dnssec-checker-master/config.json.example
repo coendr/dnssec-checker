@@ -1,0 +1,12 @@
+{
+  "DOMAIN_NAME": "x.nl",
+  "ZSK": "...",
+  "DS": "...",
+  "SMTP_SENDER":"email@domain.nl",
+  "SMTP_PASSWORD": "...",
+  "SMTP_SERVER":"smtp.domain.nl",
+  "SMTP_PORT":465,
+  "SMTP_RECEIVER": "email@domain.nl",
+  "USE_EMAIL": "True",
+  "CONTINUE_AFTER_ONE_TRY": "True",
+}

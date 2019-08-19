@@ -1,0 +1,2 @@
+dnspython3>=1.15.0
+validate_email>=1.3

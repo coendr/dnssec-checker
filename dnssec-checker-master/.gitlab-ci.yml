@@ -1,0 +1,28 @@
+image: python:3.7.3-alpine
+
+stages:
+  - run
+
+before_script:
+  - echo $JSON_FILE > config.json
+  - pip3 install -r requirements.txt
+  - pip3 install coverage
+
+
+run_args:
+  stage: run
+  tags:
+    - docker
+  script:
+    - python3 main.py -dm $DOMAIN -zsk $ZSK -ds $DS
+    - python3 main.py
+
+coverage:
+  stage: run
+  tags:
+    - docker
+  script:
+    - coverage run --source ./ main.py
+    - coverage report -m
+  coverage: '/TOTAL.+ ([0-9]{1,3}%)/'
+
